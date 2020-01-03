@@ -3,7 +3,9 @@
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%201.png)
 
 
-# Abstract
+# * Main Code: Hydraulic_PSO_GUI.m
+
+
 A MATLAB based programed tool with graphical user interface (GUI) has been developed to analyze different problems of Open Channel Flow. The tool handles all kinds of channel cross-sections comprising rectangular, trapezoidal, triangular and irregular profiles. The tool analyzes different kinds of hydraulic problems using Energy and Momentum equations as well as Manning’s equation, in both English and SI units. It also handles the Gradually Varied Flow problems, for example the problem of multiple-slope channels connected to a nearby lake, utilizing Discrete-Step numerical method, plotting a flow profile with details of critical depth and hydraulic jump location shown. In most cases during the calculations, especially for irregular cross-sections, the tool needs to perform an iterative trial and error procedure to calculate some parameters of the flow which cannot be driven in a straight-forward analytical solvation. Here, a robust meta-heuristic optimization method called Particle Swarm Optimization (PSO) has been utilized in order to find unknown variables through an intelligent search procedure, which results in more accuracy and execution speed of the model.
 
 ![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-LakeChannel.gif)
