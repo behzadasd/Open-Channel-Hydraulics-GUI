@@ -78,26 +78,32 @@ Figure 8 Example 1 Results - Second Case
 The second problem solved with the developed Tool is the problem 4.34 of Lake-Channel in the Henderson’s book. Figure 9 illustrates the situation of this problem. The definition of this kind of problem is presented in section 4.3. 
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%209.png)
+
 Figure 9 Example 2 – Solved Lake-Channel problem definition
 
 Figure 10 depicts the results of this problem. The results indicates critical depth of the channel as Yc = 4.667 ft. and critical slope as Sc = 0.002452, with a discharge of Q=1715.37 ft3/sec. The results also show that the channel slope is steep at the first section and mild in the second section. The flow depth profile of this case is shown in Figure 11. It can be seen from this Figure that the flow starts with an S2 cure and decreases from Yc to Yn1 and continues through the first sec. and at the end of the first sec. goes from super-critical to sub-critical condition through a hydraulic jump, which occurs before the slope change in the channel, and continues in Yn2 depth at the second sec.
 It can be seen from the Figure 10 that Yc is greater that slope of the channel at the first section and less than slope of the channel at the second section, which would result in first section being steep and second one being mild, as seen the results. Decreasing the slope of the first sec. to a value less than Sc should result in a channel with mild slope at both sections. The model is run with the same situation as before, except with decreasing the slope of the first section to 0.002 (less than Sc). The flow depth profile of this case is shown in Figure 12. As seen in this Figure, flow rises from Yn1 to Yn2 through a M1 curve and continues in the second section. 
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%2010.png)
+
 Figure 10 Example 2 Results - First Case
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%2011.png)
+
 Figure 11 Example 2 Flow Depth Plot - First Case (s1 > Sc > s2)
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%2012.png)
+
 Figure 12 Example 2 Flow Depth Plot - Second Case (Sc > s1 > s2)
 
 The model is also run with the same situation as the previous case, except with increasing the slope of the second section to 0.0035 and the slope of the first section to the initial value of 0.005 (s1 > s2 > Sc). Results indicate the slope of both sections steep in this case, as expected. The flow depth profile of this case is shown in Figure 13. The next case is setting s1 = 0.005 and s2 = 0.008 (s2 > s1 > Sc). The flow depth profile of this case is shown in Figure 14. In both Figures 13 and 14, flow decreases from Yc to Yn1 through a S2 curve, continues at Yn1, and at the beginning of the second sec. changes the flow depth to Yn2 through a S3 curve.
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%2013.png)
+
 Figure 13 Example 2 Flow Depth Plot - Third Case (s1 > s2 > Sc)
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%2014.png)
+
 Figure 14 Example 2 Flow Depth Plot - Forth Case (s2 > s1 > Sc)
 
 
