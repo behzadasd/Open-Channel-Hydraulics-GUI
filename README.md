@@ -12,7 +12,7 @@ Open channel is a conveyance in which water flows with a free surface. Although 
 In the remainder sections, methods and the tool’s application in different hydraulics problems is discussed. The report considers the readers as educated engineers with enough cognition of the hydraulics science, hence avoids unnecessary explanations of open channel flow’s basic formulas and theories; and directly discusses the methods and results. 
 
 # 2. The Open Channel Flow Tool - General Overview
-Figure 1 depicts the general view of the developed Tool with its components. The Tool has 4 main components, comprising:
+The Tool has 4 main components, comprising:
 
 I) Cross-Section Selection Component
 
@@ -21,10 +21,6 @@ II) Transition Problem component (Specific Energy)
 III) Manning’s equation component
 
 IV) Lake-Channel Problem component (GVF)
-
-![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%201.png)
-Figure 1 General View of the developed Tool
-
 
 The Tool handles all kinds of regular and irregular cross-sections, in both SI and English units. 
 The Tool has a “Set Zero” pushbutton which returns the Tool to its initial condition. The “Update Variable” pushbutton re-gets the variables from the input boxes and enables the “Run” pushbutton.  The “Run” pushbutton executes the model with the variables entered in the input boxes and sends the results to GUI. This button also enables the “Plot Profile” pushbutton in the Lake-Channel Problem component (GVF) component, which plots the flow depth profile for different sections of the channel in its defined plot box on the GUI panel. The Cross-Section Selection component has two “Enable” and “Disable” pushbuttons which respectively enable and disable the option of loading a predefined cross-section profile from an excel file. The other feature of the Tool is that the operator of the tool can change the variables in the input boxes and push “Update Variable” and then “Run” and see the new results, without needing to restart the Tool.
