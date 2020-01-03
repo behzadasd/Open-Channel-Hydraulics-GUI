@@ -8,10 +8,6 @@ A MATLAB based programed tool with graphical user interface (GUI) has been devel
 
 ![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-LakeChannel.gif)
 
-![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-Manning.gif)
-
-![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-Transition.gif)
-
 
 # 1. Introduction
 Open channel is a conveyance in which water flows with a free surface. Although closed conduits such as culverts and storm drains are open channels when flowing partially full, the term is generally applied to natural and improved watercourses, gutters, ditches, and channels. Water’s movement in an open channel is a difficult problem when everything is considered, especially with the variability of natural channels, but in many cases the major features can be expressed in terms of only a few variables, whose behavior can be described adequately by a simple theory. The principal forces at work are those of inertia, gravity and viscosity, each of which plays an important role. The developed formulas of the open channel flow can be utilized in a computer program to investigate the flow conditions and variables. Such a tool has been developed here.
@@ -40,34 +36,47 @@ Particle Swarm Optimization (PSO) algorithm is a stochastic population-based opt
 In PSO, a collection of particles, called a “swarm”, move around in search space looking for the best solution to an optimization problem. All particles have their own velocity that drives the direction they move in. This velocity is affected by both the position of the particle with the best fitness and each particle’s own best fitness. Fitness refers to how well a particle performs. In a flock of birds this might be how close a bird is to a food source, in an optimization algorithm this refers to the proximity of the particle to optima. Each particle’s location is given by the parameters of the given optimization problem and a particle moves around in search space by adapting and changing these parameter values. At each time step, the particle’s fitness is measured by observing the parameter values (location) of the particle. A particle keeps track of the best position it has reached so far (called the personal best position) and is also aware of the position of the overall best particle at a certain time step (called the globally best position). At each time step the particle tries to adapt its velocity (i.e. speed and direction) to move closer to both the globally best position and the personal best position in order to improve its fitness. 
 
 # 4. Components of the Tool
- 4.1. Cross-Section Selection Component
+# 4.1. Cross-Section Selection Component
 The component is shown in figure 3. There are two options implemented in the tool for definition of a cross-section. The operator of the tool can either load a predefined cross-section profile from an excel file, or specify the characteristics of it by inputting the channel bed width (B) and side slopes (z1 and z2). An input of z1 and z2 close to zero with specified value of B would result in a rectangular channel cross-section. Similarly the operator can assign a value to the side slopes (z1 and z2), inputting the bed width close to zero, and actually acquire a triangular channel. The specified or loaded cross-section can be plotted by clicking on the “Plot Profile” button. This component also contains the unit definition panel, where the operator can select between the two commonly used SI and English unit systems.
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%203.png)
 Figure 3 Cross-Section Definition Component
 
- 4.2. Transition Problem component (Specific Energy)
+# 4.2. Transition Problem component (Specific Energy)
+
 Assuming small longitudinal bed slope of the channel and uniform velocity distribution, the critical flow in open-channel hydraulics is explained as a state of flow that can lead to any one of (1) minimum specific energy for a given flow, (2) maximum flow for a given specific energy, (3) minimum specific force for a given flow, (4) Froude number equal to unity, (5) the ratio between velocity head and hydraulic depth equal to half, and (6) the ratio between velocity of flow and celerity of small gravity waves in shallow water caused by gravity waves equal to unity (Chow, 1959). The critical flow condition is an attribute of the geometric property-cum-dimensions of a channel cross section. When a channel passes through a transition, the critical flow conditions govern the limits of changes in the geometric dimensions and alignment of the channel. All flows of water through open channels associate specific energy and specific force. There can be channel geometric dimensions that may make it impossible and infeasible for the flow to occur with the known specific energy and/or specific force, and the solutions of the specific energy and specific force equations become infeasible. For states other than the critical state of flow, the specific energy and specific force equations generally have two feasible and distinctly different depths as solutions for given flow and other geometric dimensions. For a particular combination of geometric dimensions, the two depths converge to a single depth at critical state of flow and make the limiting solutions, which are characterized by the critical flow conditions (Das, 2011). 
 One of the most popular situations of this case is the transition problem where the channel cross-section faces a contraction or expansion in the width. The developed Tool here has a component for calculation of flow conditions after a contraction/expansion in the channel with/without an upward or downward step on the way of flow. The operator can specify flow depth and velocity at the upstream or downstream of the transition and calculate the flow condition, critical depth and specific energy at both sides. The Tool also specifies whether the choking will happen during the contraction or not. The Specific Energy problem component of the Tool is depicted in Figure 4.
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%204.png)
 Figure 4 Specific Energy problem component
 
- 4.3. Manning’s equation component
+![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-Transition.gif)
+Video 1 Transition Problem component (Specific Energy)
+
+# 4.3. Manning’s equation component
+
 The well-known Manning’s equation is an empirical formula estimating open channel flow, or free-surface flow driven by gravity. The developed Tool has a component for calculation of flow characteristics utilizing the Manning’s equation for different sets of input data. The operator can specify the cross-section of the channel and then input either triple-set of the 4 main variables of the Manning’s equation, comprising roughness (n), bed slope (S), flow depth (Y) and flow discharge in the channel (Q), and run the tool to obtain the unknown variable. This component is shown in Figure 5.
 The Manning’s equation component can be executed separately here, but it is also used by other components of the model to analyze the Gradually Varied Flow in the channel in the corresponding component.
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%205.png)
 Figure 5 The Manning’s equation component
 
-4.4. Lake-Channel Problem component (GVF component)
+![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-Manning.gif)
+Video 2 Manning’s equation component
+
+# 4.4. Lake-Channel Problem component (GVF component)
+
 Figure 6 illustrates the Lake-Channel Problem component of the Tool. This component is actually the main component of the developed Tool for calculation of the Gradually Varied Flow (GVF) in the channel. The predefined situation for this component is a slope-varying regular/irregular cross-sectioned channel connected to a nearby lake/reservoir with a specified value of water head above the channel bed. The tool executes the model for any of the variables of discharge (Q) or water head above the channel (E_0) given. The Tool utilizes the Manning’s equation component for analysis of the flow here.  Execution of the model with given inputs by clicking on the “Run” will enable the “Plot Profile” pushbutton. This pushbutton plots the flow depth profile along the channel. The Tool uses the Direct-Step numerical method to calculate the flow profile along the channel. Details of cross-section slope change location, critical depth line and location of the probable hydraulic jump through the channel are shown in the plot. The Tool also specifies the steepness/mildness of the channel bed slope for the given inputs.
 It is obvious that the operator can simply input the slopes of the two sections equal to each other and solve a single-sloped channel connected to a lake. The operator can load any irregular cross-section profile for the channel and by inputting channel bed roughness (n), slope (S) and lake head (E_0), subsequently acquire the critical depth (Yc), critical slope (Sc), discharge (Q), flow condition(Sub/Super Critical) and flow depth profile from the model.
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%206.png)
 Figure 6 Lake-Channel Problem component
 
+![Output sample](https://github.com/behzadasd/Open-Channel-Hydraulics-GUI/blob/master/Figures/Rec-LakeChannel.gif)
+Video 3 Lake-Channel Problem component (GVF component)
+
 # 5. Testing the developed Tool
+
 In this section, some hydraulics problems are solved by the developed Tool and the results are shown.
 The first problem to be solved is a transition problem where water flows in a rectangular channel with initial width of B1=10 ft. and secondary width of B2=9 ft. which results in a 1 ft. contraction. The initial flow depth and velocity is Y1=10 ft. and V1=10 ft. /sec, respectively. The result of the model’s run is shown in Figure 7. The Tool indicates the flow condition is Sub-Critical in both upstream and downstream sections and no chocking will happen. The secondary l flow depth and velocity is Y2=9.367 ft. and V1=11.864 ft. /sec, respectively. The model is run with the same situation but with more contraction on the width, where the secondary width of the B2=5 ft. The Tool indicates the flow condition in this case will be is Super-Critical and chocking will happen. The results for this case are depicted in Figure 8.
 
