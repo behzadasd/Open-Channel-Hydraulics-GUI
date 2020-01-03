@@ -1,4 +1,4 @@
-# Graphical Open Channel Flow Hydraulics tool with PSO Solver and Graphical User Interface
+# Open Channel Flow Hydraulics tool with PSO Solver and Graphical User Interface
 
 ![Alt text](https://raw.githubusercontent.com/behzadasd/Open-Channel-Hydraulics-GUI/master/Figures/Pic%201.png)
 
